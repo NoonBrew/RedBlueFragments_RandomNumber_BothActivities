@@ -10,18 +10,18 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.setFragmentResultListener(RANDOM_NUMBER_GEN, this) {
             requestKey, bundle -> // Swap out red fragment for blue fragment
-                supportFragmentManager.beginTransaction()
-                    .add(R.id.fragmentContainerView, BlueFragment.newInstance())
-                    .addToBackStack("BLUE")
-                    .commit()
+//                supportFragmentManager.beginTransaction()
+//                    .add(R.id.red_fragment_container, BlueFragment.newInstance())
+//                    .addToBackStack("BLUE")
+//                    .commit()
         }
 
         supportFragmentManager.setFragmentResultListener(RANDOM_NUMBER_VIEWED, this) {
             requestKey, bundle -> // Swap out blue fragment for red fragment
-                supportFragmentManager.beginTransaction()
-                    .add(R.id.fragmentContainerView, RedFragment.newInstance())
-                    .addToBackStack("RED")
-                    .commit()
+//                supportFragmentManager.beginTransaction()
+//                    .add(R.id.red_fragment_container, RedFragment.newInstance())
+//                    .addToBackStack("RED")
+//                    .commit()
         }
         // Options: 1. Adds, 2. Replaces.
         // 1. Pause the red fragment, add the blue fragment "on top" <- Fine for lightweight fragments
